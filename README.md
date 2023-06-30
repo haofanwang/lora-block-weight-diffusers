@@ -31,6 +31,14 @@ state_dict = block_weight_bin(file_dir="your.bin", weight_ratios="1,1,1,1,1,1,1,
 state_dict = block_weight_safetensors(file_dir="your.safetensors", weight_ratios="1,1,1,1,1,1,1,0.5,1,1,1,1,1,1,1,1,1", save_dir="./new.safetensors")
 ```
 
+## How to set weights?
+To achieve best result, it is better to adjust case by case, but there do exists some general suggestions.
+
+1. "BASE" is usually set to 1 by default.
+2. "IN01","IN02","IN03" are also named "INS", that are corresponding to cloth details. "IN04","IN05","IN06" are also named "IND". "IN04","IN05" are corresponding to background, while "IN06  is related to cloth and action.
+4. "MID" is relavant to action.
+5. "OUT01","OUT02","OUT03" are also named "OUTD", "OUT01","OUT02" are corresponding to facial details and action. "OUT03" are corresponding to facial details, cloth details and accessories. "OUT04","OUT05","OUT06","OUT07" are more relevant to background. "OUT08","OUT09" are relevant to color.
+
 ## Acknowledgement
 This project is inspired by [sd-webui-lora-block-weight](https://github.com/hako-mikan/sd-webui-lora-block-weight), and mainly tagetting for the convenience of advanced developers.
 
