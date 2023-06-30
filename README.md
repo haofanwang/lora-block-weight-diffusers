@@ -1,6 +1,9 @@
 # lora-block-weight-diffusers
 When applying Lora, strength can be set block by block. Support for diffusers framework.
 
+## Why it works?
+The core idea behind is that there are differences in the semantics captured by different layers of the neural network. For the recent exploration of generative models, it is getting closer to AI engineering rather than AI research. Researchers in the community found that by adjusting the weight of LoRA in different Blocks, the quality of generated characters can be controlled.
+
 ## Usage
 ```bash
 """
